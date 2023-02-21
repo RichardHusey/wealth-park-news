@@ -40,7 +40,12 @@ const News: React.FC = () =>{
         />
         
       </Header>
-      <NewsPanel></NewsPanel>
+      <NewsPanel
+         news={topStoryIds.slice(
+          currentPage * limitNews,
+          currentPage * limitNews + limitNews
+        )}
+      ></NewsPanel>
     </>
   )
 }
